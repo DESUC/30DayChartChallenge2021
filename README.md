@@ -11,8 +11,7 @@ Equipo [DESUC](http://sociologia.uc.cl/desuc/quienes-somos-desuc/)
 
 ### Día 1: Part to whole 
 
-- Datos para la elaboración del gráfico disponibles [aquí](/input/Base Datos IX ENTV CNTV.sav). 
-También lo pueden encontrar en la página web de [CNTV](https://www.cntv.cl/estudios-y-estadisticas/encuesta-nacional-de-television/)
+- Datos para la elaboración del gráfico disponibles en la página web de [CNTV](https://www.cntv.cl/estudios-y-estadisticas/encuesta-nacional-de-television/)
 - Código disponible [aquí](/R/01-part_to_whole.R)
 
 ![Día 1](output/01-part-to-whole.png)
