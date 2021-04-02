@@ -15,3 +15,10 @@ Equipo [DESUC](http://sociologia.uc.cl/desuc/quienes-somos-desuc/)
 - Código disponible [aquí](/R/01-part_to_whole.R)
 
 ![Día 1](output/01-part-to-whole.png)
+
+### Día 2: Pictogram
+
+- Datos para la elaboración del gráfico disponibles públicamente, ver script.
+- Código disponible [aquí](/R/02-pictogram.R)
+
+![Día 2](output/02-pictogram.png)
