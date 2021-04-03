@@ -49,9 +49,9 @@ label2 <- c('','','','\u{265F}','','')
 
 datos <- cbind(datos,label,label2)
 
-paleta_hp <- c('#AE2825','#9A1C1F','#86162A','#F7EE23','#E5BA30','#DDB03C')
-
 # Gráfico ----------------
+
+paleta_hp <- c('#AE2825','#9A1C1F','#86162A','#F7EE23','#E5BA30','#DDB03C')
 
 datos %>% 
   mutate(x = fct_reorder(x,freq)) %>%
@@ -65,7 +65,7 @@ datos %>%
   theme_minimal(base_family = "Harry Potter") +
   theme(axis.text = element_blank(),
         legend.position = "none",
-        plot.background = element_rect(fill = "grey90"),
+        plot.background = element_rect(fill = "grey95"),
         panel.grid.major = element_blank(),
         plot.title = element_text(size = rel(4.5)),
         axis.title = element_text(size = rel(2.5))) +
