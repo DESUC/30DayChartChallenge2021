@@ -22,3 +22,10 @@ Equipo [DESUC](http://sociologia.uc.cl/desuc/quienes-somos-desuc/)
 - Código disponible [aquí](/R/02-pictogram.R)
 
 ![Día 2](output/02-pictogram.png)
+
+### Día 3: Historical
+
+- Datos para la elaboración del gráfico disponibles públicamente, ver script.
+- Código disponible [aquí](/R/03-historical.R)
+
+![Día 3](output/03-historical.png)
