@@ -29,3 +29,10 @@ Equipo [DESUC](http://sociologia.uc.cl/desuc/quienes-somos-desuc/)
 - Código disponible [aquí](/R/03-historical.R)
 
 ![Día 3](output/03-historical.png)
+
+### Día 4: Magical
+
+- Datos para la elaboración del gráfico disponibles públicamente en paquete.
+- Código disponible [aquí](/R/04-magical.R)
+
+![Día 4](output/04-magical.png)
