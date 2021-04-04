@@ -59,7 +59,7 @@ datos %>%
   geom_bar(stat="identity", alpha=.9, width=.6) +
   geom_text(family = "EmojiOne", size = 25, vjust = -.05) +
   geom_text(aes(label = label2), size = 25, vjust = -.3) +
-  geom_text(aes(label = freq), size = 10, y = 100, vjust = -0.1, hjust = .5, fontface = "bold") +
+  geom_text(aes(label = freq), size = 10, vjust = 1.2, hjust = .5, fontface = "bold") +
   scale_y_continuous(limits = c(0,20000)) + 
   scale_fill_manual(values = rev(paleta_hp)) + 
   theme_minimal(base_family = "Harry Potter") +
