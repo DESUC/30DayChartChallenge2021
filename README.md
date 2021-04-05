@@ -36,3 +36,10 @@ Equipo [DESUC](http://sociologia.uc.cl/desuc/quienes-somos-desuc/)
 - Código disponible [aquí](/R/04-magical.R)
 
 ![Día 4](output/04-magical.png)
+
+### Día 5: Slopes
+
+- Datos para la elaboración del gráfico disponibles públicamente en paquete.
+- Código disponible [aquí](/R/05-slopes.R)
+
+![Día 5](output/05-slopes.png)
