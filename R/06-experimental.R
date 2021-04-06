@@ -15,8 +15,6 @@ library(tidyverse)
 library(ggtext)
 library(mdthemes)
 
-
-
 md_str_wrap <- function(x, 
                         width = 80){
   if(!is.null(width)){
@@ -58,11 +56,12 @@ df_long <- df %>%
 df_nota <- tibble(prop = 25,
                   Media = 2,
                   Pregunta = unique(df_long[['Pregunta']])[[2]],
-                  label = str_glue("Los encuestados <span style = 'color:{colores[1]};'>declaran</span>  
+                  label = str_glue("<span style = 'color:{colores[2]};'>Observando</span> su navegación,  
+                                   vemos que personas <span style = 'color:{colores[1]};'>declaran</span>  
                                    mayor consumo de medios  
-                                   respecto de su real consumo  
-                                   al <span style = 'color:{colores[2]};'>observar</span> su historial  
-                                   de navegación."))
+                                   respecto de lo que  
+                                   realmente hacen.
+                                   "))
 
 gg <- df_long %>% 
   ggplot(aes(x = prop,
