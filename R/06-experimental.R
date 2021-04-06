@@ -56,7 +56,7 @@ df_long <- df %>%
 
 # Nota:
 df_nota <- tibble(prop = 25,
-                  Media = 4,
+                  Media = 2,
                   Pregunta = unique(df_long[['Pregunta']])[[2]],
                   label = str_glue("Los encuestados <span style = 'color:{colores[1]};'>declaran</span>  
                                    mayor consumo de medios  
@@ -64,7 +64,7 @@ df_nota <- tibble(prop = 25,
                                    al <span style = 'color:{colores[2]};'>observar</span> su historial  
                                    de navegación."))
 
-df_long %>% 
+gg <- df_long %>% 
   ggplot(aes(x = prop,
              y = Media,
              colour = var)) + 
@@ -89,12 +89,13 @@ df_long %>%
                 family = 'Roboto Condensed',
                 hjust = 0,
                 lineheight = 0,
-                size = rel(2.5),
+                size = rel(3.5),
                 colour = 'gray10') +
   scale_colour_manual(values = colores,
                       guide = 'none') + 
   scale_x_continuous('Porcentaje',
                      limits = c(0, 100),
+                     labels = NULL,
                      expand = expansion(add = 0)) +
   labs(title = str_glue("Diferencia entre 
                         <span style = 'color:{colores[2]};'>**observación**</span>
@@ -110,6 +111,12 @@ df_long %>%
         strip.text.y.left = element_markdown(angle = 0,
                                              vjust = 1))
 
+pg <- ggplotGrob(gg)
+
+for(i in which(grepl("strip-l", pg$layout$name))){
+  pg$grobs[[i]]$layout$clip <- "off"
+}
+
 # Grabar gráfico
 dims <- c(w =  400, h = 600, res = 72)
 dims <- dims * 2 #Retina
@@ -119,6 +126,6 @@ ragg::agg_png('output/06-experimental.png',
         height = dims["h"], 
         res = dims["res"],
         units = "px")
-last_plot()
+grid::grid.draw(pg)
 invisible(dev.off())
 
