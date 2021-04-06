@@ -42,7 +42,7 @@ df <- df %>%
 
 # Saltos de línea para etiquetas de strips
 df <- df %>% 
-  mutate(Pregunta = md_str_wrap(Pregunta, width = 15))
+  mutate(Pregunta = md_str_wrap(Pregunta, width = 20))
 
 # Ajuste de orden de variables
 df <- df %>% 
@@ -62,7 +62,7 @@ df_nota <- tibble(prop = 25,
                                    mayor consumo de medios  
                                    respecto de su real consumo  
                                    al <span style = 'color:{colores[2]};'>observar</span> su historial  
-                                   de navegación"))
+                                   de navegación."))
 
 df_long %>% 
   ggplot(aes(x = prop,
@@ -86,10 +86,10 @@ df_long %>%
              scales = 'free_y') +
   geom_richtext(data = df_nota,
                 aes(label = label),
-                # label.r	= 0,
+                family = 'Roboto Condensed',
                 hjust = 0,
                 lineheight = 0,
-                size = rel(2),
+                size = rel(2.5),
                 colour = 'gray10') +
   scale_colour_manual(values = colores,
                       guide = 'none') + 
@@ -102,6 +102,7 @@ df_long %>%
        y = 'Medios',
        caption = md_str_wrap(caption, width = NULL)) + 
   md_theme_ipsum_rc() +
+  coord_cartesian(clip = 'off') + 
   theme(legend.position = 'top',
         plot.title.position = 'plot',
         plot.title = element_markdown(size = rel(1.2)),
@@ -110,10 +111,14 @@ df_long %>%
                                              vjust = 1))
 
 # Grabar gráfico
-dims <- c(w =  800, h = 320, res = 72)
+dims <- c(w =  400, h = 600, res = 72)
 dims <- dims * 2 #Retina
 
-ragg::agg_png(filename = 'output/06-experimental.png',
-              width = dims["w"], 
-              height = dims["h"], 
-              res = dims["res"])
+ragg::agg_png('output/06-experimental.png', 
+        width = dims["w"], 
+        height = dims["h"], 
+        res = dims["res"],
+        units = "px")
+last_plot()
+invisible(dev.off())
+
