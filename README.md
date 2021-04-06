@@ -43,3 +43,13 @@ Equipo [DESUC](http://sociologia.uc.cl/desuc/quienes-somos-desuc/)
 - Código disponible [aquí](/R/05-slopes.R)
 
 ![Día 5](output/05-slopes.png)
+
+### Día 6: Experimental
+
+- Datos para la elaboración del gráfico a partir de informe de Pew Research Center 
+[Measuring News Consumption in a Digital Era][06-pew]
+- Código disponible [aquí](/R/06-experimental.R)
+
+[06-pew]: https://www.journalism.org/2020/12/08/measuring-news-consumption-in-a-digital-era/
+
+![Día 6](output/06-experimental.png)
