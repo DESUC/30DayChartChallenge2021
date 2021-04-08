@@ -53,3 +53,12 @@ Equipo [DESUC](http://sociologia.uc.cl/desuc/quienes-somos-desuc/)
 [06-pew]: https://www.journalism.org/2020/12/08/measuring-news-consumption-in-a-digital-era/
 
 ![Día 6](output/06-experimental.png)
+
+### Día 8: Lollipop
+
+- Datos para el gráfico a partir de nota [*Las curiosidades del Registro Nacional de Mascotas a dos años de su obligatoriedad*][08-subdere] de la Subsecretaría de Desarrollo Regional.
+- Código disponible [aquí](/R/08-lollipop.R)
+
+[08-subdere]: http://www.subdere.gov.cl/sala-de-prensa/las-curiosidades-del-registro-nacional-de-mascotas-dos-a%C3%B1os-de-su-obligatoriedad
+
+![Día 8](output/08-lollipop.png)
