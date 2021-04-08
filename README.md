@@ -61,4 +61,4 @@ Equipo [DESUC](http://sociologia.uc.cl/desuc/quienes-somos-desuc/)
 
 [08-subdere]: http://www.subdere.gov.cl/sala-de-prensa/las-curiosidades-del-registro-nacional-de-mascotas-dos-a%C3%B1os-de-su-obligatoriedad
 
-![Día 8](output/08-lollipop.png)
+![Día 8](output/08-lollipop_mascotas.png)
