@@ -26,13 +26,17 @@ mascotas <- mascotas %>%
          prop_perro = PERROS/TOTAL,
          prop_diff = prop_perro - prop_gato)
 
+# Color a partir de emojis
+color <- c(perro = '#A96500',
+           gato = '#F8CF37')
+
 ggplot(data = mascotas,
        aes(y = REGION)) +
   geom_segment(aes(x=prop_gato, 
                    xend=prop_perro, 
                    yend = REGION,
                    colour = prop_diff),
-               size = 1.2) +
+               size = 1.5) +
   geom_text(aes(x=prop_perro), 
             label = '🐶',
             size = 6) +
@@ -41,24 +45,29 @@ ggplot(data = mascotas,
             size = 6) + 
   scale_x_continuous('', 
                      limits = c(0,1), 
-                     labels = function(x) scales::percent(x, accuracy = 1)) +
-  scale_shape_manual(values=c(19,20)) +
-  scale_color_viridis_c(guide = 'none') + 
-  # scale_colour_manual(values=c("#006633", "#000066")) +
-  theme_minimal() +
-  theme(legend.title = element_blank(),
-        plot.title = element_text(size = rel(1)),
-        plot.subtitle = element_text(size = rel(0.8)),
-        axis.text.y = element_text(size = 10)) +
-  labs(title = "Registro Nacional de Mascotas: Según región",
-       subtitle = "Proporción de mascotas registradas",
+                     labels = scales::percent,
+                     expand = expansion(add = c(0, 0.05))) +
+  scale_colour_gradient(low = color['gato'],
+                        high = color['perro'],
+                        guide = 'none') + 
+  labs(title = "Registro Nacional de Mascotas según región",
+       subtitle = "Proporción de gatos y perros registrados respecto del total",
        caption = "Datos obtenidos desde página web de SUBDERE (2019)",
        y = NULL) +
+  theme_minimal() +
   theme(plot.title.position = 'plot',
-        plot.title = element_text(face = 'bold'))
+        plot.title = element_text(face = 'bold'),
+        plot.subtitle = element_text(size = rel(1)),
+        axis.text.y = element_text(size = 10))
 
-ggsave('lollipop_mascotas2.png',
-       width = 5,
-       height = 5,
-       scale = 3,
-       units = 'cm')
+# Grabar gráfico
+dims <- c(w =  400, h = 400, res = 72)
+dims <- dims * 2 #Retina
+
+ragg::agg_png('output/08-lollipop_mascotas.png', 
+              width = dims["w"], 
+              height = dims["h"], 
+              res = dims["res"],
+              units = "px")
+last_plot()
+invisible(dev.off())
