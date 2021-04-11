@@ -53,3 +53,10 @@ Equipo [DESUC](http://sociologia.uc.cl/desuc/quienes-somos-desuc/)
 [06-pew]: https://www.journalism.org/2020/12/08/measuring-news-consumption-in-a-digital-era/
 
 ![Día 6](output/06-experimental.png)
+
+### Día 8: Animals
+
+- Datos para la elaboración del gráfico disponibles públicamente, ver script.
+- Código disponible [aquí](/R/08-mascotas.R)
+
+![Día 8](output/08-animals.png)
