@@ -64,3 +64,11 @@ Equipo [DESUC](http://sociologia.uc.cl/desuc/quienes-somos-desuc/)
 
 ![Día 8](output/08-lollipop_mascotas.png)
 
+
+### Día 10: Abstract
+
+- Datos para el gráfico a partir de las métricas de Spotify*.
+- Código disponible [aquí](/R/10-abstract.R)
+
+![Día 10](output/10-abstract_taylor_swift.png)
+
