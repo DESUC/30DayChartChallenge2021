@@ -4,7 +4,7 @@ library(spotifyr)
 library(tidyverse)
 library(sjmisc)
 
-spotify_df <- readRDS("taylor_df.rds")
+spotify_df <- readRDS("abstract_taylor_df.rds")
 
 # Función para guardar en el mismo formato ambos gráficos:
 
