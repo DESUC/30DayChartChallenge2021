@@ -1,10 +1,17 @@
 ### Paquetes ----
 
+# https://github.com/charlie86/spotifyr
+# 
+# Para correr código se necesita acceso a la API de Spotify
+# https://developer.spotify.com/my-applications/#!/applications
 library(spotifyr)
+
+access_token <- get_spotify_access_token()
+
 library(tidyverse)
 library(sjmisc)
 
-spotify_df <- readRDS("abstract_taylor_df.rds")
+spotify_df <- readRDS("input/abstract_taylor_df.rds")
 
 # Función para guardar en el mismo formato ambos gráficos:
 
@@ -24,7 +31,8 @@ spotify_df <- get_artist_audio_features('taylor swift')
 
 # Seleccionaremos sólo algunas columas que nos interesan:
 
-taylor_df <- spotify_df %>%  select(album_name, album_release_year, track_name, track_number, danceability, energy, speechiness) %>% 
+taylor_df <- spotify_df %>% 
+  select(album_name, album_release_year, track_name, track_number, danceability, energy, speechiness) %>% 
   filter(album_name %in% c("1989","evermore","Fearless","folklore","Lover","Red","reputation","Speak Now","Taylor Swift"))
 
 # Hice una paleta con los colores del album 'Lover' de Taylor Swift utilizando la paleta de esta página (https://coolors.co/61aed9-fea8b6-fdb8db-3980bb-d6638f-9fb2cf-fec3b4-fdebb7)
@@ -33,11 +41,16 @@ lover_palette <- c("#61aed9","#fea8b6","#fdb8db","#3980bb","#d6638f","#9fb2cf","
 
 # El gráfico abstracto:
 
+theme_set(theme_minimal(base_family = "Georgia"))
+
 taylor_df %>% 
   mutate(album_name = str_to_lower(album_name)) %>% 
   ggplot(aes(y = danceability, x = energy, colour = album_name)) +
   geom_point(aes(size = speechiness), alpha = 0.8) +
-  scale_color_manual(values = lover_palette, '') +
+  ggforce::geom_mark_hull(aes(fill = album_name),
+                          alpha = .1) + 
+  scale_color_manual(values = lover_palette, '',
+                     aesthetics = c('color', 'fill')) +
   scale_size_continuous(range = c(10,15)) +
   labs(x = 'energía', 
        y = 'danzabilidad',
@@ -45,7 +58,6 @@ taylor_df %>%
        caption = 'tamaño del círculo varía según el porcentaje de habla en cada una de las canciones. \nentre más grande el círculo, más letra tiene.\nfuente: spotify',
        subtitle = 'danzabilidad, energía y habla en las canciones de taylor swift') +
   guides(size = F, colour = guide_legend(nrow = 1, override.aes = list(size = 5))) +
-  theme_minimal() +
   theme(legend.position = 'bottom', legend.direction = 'horizontal',
         legend.key.size = unit(.5, "cm"),
         panel.background = element_rect(fill = "aliceblue", color = NA),
@@ -55,13 +67,12 @@ taylor_df %>%
         panel.grid.minor = element_blank(),
         text = element_text(family="Georgia", face = "italic"))
 
-ggsave_estandar(filename = "taylor_swift.png")
+ggsave_estandar(filename = "output/10-abstract_taylor_swift.png")
 
 #Para que geom_text tenga el mismo tipo de letra que utilizamos en el gráfico:
 
-theme_set(theme_minimal(base_family = "Georgia"))
-
-update_geom_defaults("text", list(family = theme_get()$text$family))
+update_geom_defaults("text", 
+                     list(family = theme_get()$text$family))
 
 # Gráfico con el track en cada uno de los puntos, así pueden ver sus características y buscarla:
 
@@ -79,7 +90,6 @@ taylor_df %>%
        caption = 'tamaño del círculo varía según el porcentaje de habla en cada una de las canciones. \nentre más grande el círculo, más letra tiene.\nfuente: spotify',
        subtitle = 'danzabilidad, energía y habla en las canciones de taylor swift') +
   guides(size = F, colour = guide_legend(nrow = 1, override.aes = list(size = 5))) +
-  theme_minimal() +
   theme(legend.position = 'bottom', legend.direction = 'horizontal',
         legend.key.size = unit(.5, "cm"),
         panel.background = element_rect(fill = "aliceblue", color = NA),
@@ -89,4 +99,4 @@ taylor_df %>%
         panel.grid.minor = element_blank(),
         text = element_text(family="Georgia", face = "italic"))
 
-ggsave_estandar(filename = "taylor_swift_tracks.png")
+ggsave_estandar(filename = "output/10-abstract_taylor_swift_tracks.png")
