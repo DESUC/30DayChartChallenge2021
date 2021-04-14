@@ -55,6 +55,13 @@ Equipo [DESUC](http://sociologia.uc.cl/desuc/quienes-somos-desuc/)
 ![Día 6](output/06-experimental.png)
 
 
+### Día 7: Physical
+
+- Datos para la elaboración del gráfico a partir de la Encuesta realizada por Elige Vivir Sano y Universidad San Sebastián. Link en script.
+- Código disponible [aquí](/R/07-physical.R)
+
+![Día 7](output/07-physical.png)
+
 ### Día 8: Animals
 
 - Datos para el gráfico a partir de nota [*Las curiosidades del Registro Nacional de Mascotas a dos años de su obligatoriedad*][08-subdere] de la Subsecretaría de Desarrollo Regional.
