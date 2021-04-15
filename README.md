@@ -92,3 +92,10 @@ Equipo [DESUC](http://sociologia.uc.cl/desuc/quienes-somos-desuc/)
 - Código disponible [aquí](/R/14-space.py)
 
 ![Día 14](output/14-space.png)
+
+### Día 15: Multivariate
+
+- Datos para el gráfico en script.
+- Código disponible [aquí](/R/15-multivariate.R)
+
+![Día 15](output/15-smultivariate.png)
