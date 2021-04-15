@@ -4,7 +4,9 @@ library(spotifyr)
 library(tidyverse)
 library(sjmisc)
 
-spotify_df <- readRDS("abstract_taylor_df.rds")
+# Para ocupar "spotify" es necesario hacerse una cuenta en https://developer.spotify.com/ para obtener el Cliend ID y el Client Secret que sirven para conectar a la API.
+
+spotify_df <- readRDS("input/abstract_taylor_df.rds")
 
 # Función para guardar en el mismo formato ambos gráficos:
 
@@ -38,7 +40,7 @@ taylor_df %>%
   ggplot(aes(y = danceability, x = energy, colour = album_name)) +
   geom_point(aes(size = speechiness), alpha = 0.8) +
   scale_color_manual(values = lover_palette, '') +
-  scale_size_continuous(range = c(10,15)) +
+  scale_size_continuous(range = c(10,15)) + #Modificar el rango del tamaño de los puntos
   labs(x = 'energía', 
        y = 'danzabilidad',
        title = 'gráfico abstracto utilizando las métricas de las canciones de taylor swift',

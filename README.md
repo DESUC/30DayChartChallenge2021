@@ -79,3 +79,16 @@ Equipo [DESUC](http://sociologia.uc.cl/desuc/quienes-somos-desuc/)
 
 ![Día 10](output/10-abstract_taylor_swift.png)
 
+### Día 13: Correlación
+
+- Datos para el gráfico en script (con sinimr)
+- Código disponible [aquí](/R/13-correlation.R)
+
+![Día 13](output/13-correlation.png)
+
+### Día 14: Space
+
+- Datos para el gráfico en script.
+- Código disponible [aquí](/R/14-space.py)
+
+![Día 14](output/14-space.png)
