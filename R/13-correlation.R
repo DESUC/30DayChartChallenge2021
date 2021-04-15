@@ -59,4 +59,4 @@ df_sinim %>%
         axis.text = element_text(color = "#fb8500", size = 10),
         title = element_text(color = "#fb8500", face = "bold"))
 
-ggsave("output/13-correlation.png", width = 18, height = 14, units = "cm")
+ggsave("output/13-correlation.png", width = 20, height = 14, units = "cm")
