@@ -98,4 +98,4 @@ Equipo [DESUC](http://sociologia.uc.cl/desuc/quienes-somos-desuc/)
 - Datos para el gráfico en script.
 - Código disponible [aquí](/R/15-multivariate.R)
 
-![Día 15](output/15-smultivariate.png)
+![Día 15](output/15-multivariate.png)
