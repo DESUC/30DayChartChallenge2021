@@ -10,13 +10,13 @@ library(extrafont)
 
 # Carga de shapefile de las comunas de Chile, seleccionamos sólo las comunas de la RM y provincia de Santiago.
 
-df_rm <- sf::st_read(dsn = "Comunas", layer = "comunas") %>% 
+df_rm <- sf::st_read(dsn = "input/Comunas", layer = "comunas") %>% 
   filter(Region == "Región Metropolitana de Santiago") %>% 
   filter(Provincia == "Santiago")
 
 # Cargamos el shapefile con las coordenadas de las estaciones del metro de Stgo.
 
-df_metro <- sf::st_read(dsn = "Estaciones_actuales_Metro_de_Santiago", layer = "Estaciones_actuales_Metro_de_Santiago.")
+df_metro <- sf::st_read(dsn = "input/Estaciones_actuales_Metro_de_Santiago", layer = "Estaciones_actuales_Metro_de_Santiago.")
 
 # Hacer la paleta de colores de acuerdo a los colores institucionales:
 
@@ -55,7 +55,7 @@ mapa
 
 # Cargamos la información de movilidad obtenida del INE -> Transporte y comunicaciones.
 
-info_metro <- read_excel("metro.xlsx") %>% 
+info_metro <- read_excel("input/metro.xlsx") %>% 
   pivot_longer(cols = 4:7)
 
 info_metro <- info_metro %>% 
@@ -117,6 +117,6 @@ hacer un mapa que tenga contenido sobre movilidad en las estaciones del metro. O
                   plot.title = element_text(colour = "#edf2f4", face = "bold", family = "Impact")))
 
 
-ggsave("output/18-conections.png", width = 18, height = 14, units = "cm")
+ggsave("output/18-connections.png", width = 22, height = 22, units = "cm")
 
                   

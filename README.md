@@ -99,3 +99,12 @@ Equipo [DESUC](http://sociologia.uc.cl/desuc/quienes-somos-desuc/)
 - Código disponible [aquí](/R/15-multivariate.R)
 
 ![Día 15](output/15-multivariate.png)
+
+### Día 18: Connections
+
+- Datos de número de pasajeros transportados obtenidas desde el [INE](https://www.ine.cl/estadisticas/economia/transporte-y-comunicaciones/transporte-y-comunicaciones).
+- Código disponible [aquí](/R/18-connections.R)
+
+![Día 18](output/18-connections.png)
+
+
