@@ -103,6 +103,8 @@ Equipo [DESUC](http://sociologia.uc.cl/desuc/quienes-somos-desuc/)
 ### Día 18: Connections
 
 - Datos de número de pasajeros transportados obtenidas desde el [INE](https://www.ine.cl/estadisticas/economia/transporte-y-comunicaciones/transporte-y-comunicaciones).
+- Shapefile de la división comunal en Chile fueron obtenidas desde esta [página](https://www.bcn.cl/siit/mapas_vectoriales/index_html).
+- Shapefile del Metro de Santiago fue sacada desde [aquí](https://ideocuc-ocuc.hub.arcgis.com/datasets/a728b2ad4b6d41359a1d4514ece5f05f_0).
 - Código disponible [aquí](/R/18-connections.R)
 
 ![Día 18](output/18-connections.png)

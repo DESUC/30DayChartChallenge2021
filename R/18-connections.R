@@ -8,13 +8,13 @@ library(patchwork)
 library(readxl)
 library(extrafont)
 
-# Carga de shapefile de las comunas de Chile, seleccionamos sólo las comunas de la RM y provincia de Santiago.
+# Carga de shapefile de las comunas de Chile, seleccionamos sólo las comunas de la RM y provincia de Santiago (https://www.bcn.cl/siit/mapas_vectoriales/index_html)
 
 df_rm <- sf::st_read(dsn = "input/Comunas", layer = "comunas") %>% 
   filter(Region == "Región Metropolitana de Santiago") %>% 
   filter(Provincia == "Santiago")
 
-# Cargamos el shapefile con las coordenadas de las estaciones del metro de Stgo.
+# Cargamos el shapefile con las coordenadas de las estaciones del metro de Stgo (https://ideocuc-ocuc.hub.arcgis.com/datasets/a728b2ad4b6d41359a1d4514ece5f05f_0).
 
 df_metro <- sf::st_read(dsn = "input/Estaciones_actuales_Metro_de_Santiago", layer = "Estaciones_actuales_Metro_de_Santiago.")
 
