@@ -105,7 +105,7 @@ Equipo [DESUC](http://sociologia.uc.cl/desuc/quienes-somos-desuc/)
 - Datos para el gráfico en script.
 - Código disponible [aquí](/R/17-pop_culture.R)
 
-![Día 17](output/17-pop_culture.png)
+![Día 17](output/17_pop_culture.png)
 
 ### Día 18: Connections
 
