@@ -100,6 +100,13 @@ Equipo [DESUC](http://sociologia.uc.cl/desuc/quienes-somos-desuc/)
 
 ![Día 15](output/15-multivariate.png)
 
+### Día 17: Pop Culture
+
+- Datos para el gráfico en script.
+- Código disponible [aquí](/R/17-pop_culture.R)
+
+![Día 15](output/17-pop_culture.png)
+
 ### Día 18: Connections
 
 - Datos de número de pasajeros transportados obtenidas desde el [INE](https://www.ine.cl/estadisticas/economia/transporte-y-comunicaciones/transporte-y-comunicaciones).
