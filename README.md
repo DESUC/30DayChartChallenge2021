@@ -116,4 +116,11 @@ Equipo [DESUC](http://sociologia.uc.cl/desuc/quienes-somos-desuc/)
 
 ![Día 18](output/18-connections.png)
 
+### Día 19: Global Change
+
+- Los datos de Brechas de Género pueden ser obtenidos desde el [Banco Mundial](https://tcdata360.worldbank.org/indicators/af52ebe9?country=BRA&indicator=27959&viz=line_chart&years=2006,2020).
+- Código disponible [aquí](/R/19-global_change.R)
+
+![Día 19](output/19-global_change.png)
+
 
