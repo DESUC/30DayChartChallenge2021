@@ -123,4 +123,13 @@ Equipo [DESUC](http://sociologia.uc.cl/desuc/quienes-somos-desuc/)
 
 ![Día 19](output/19-global_change.png)
 
+### Día 20 y 21: Upwards & Downwards
+
+- Los datos de metereológicos pueden ser encontrados [en esta página](http://www.cr2.cl).
+- Código disponible [aquí](/R/20-upwards.R)
+
+![Día 20](output/20-upwards.gif)
+
+![Día 21](output/21-downwards.gif)
+
 

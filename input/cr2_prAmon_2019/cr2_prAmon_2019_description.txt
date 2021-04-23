@@ -1,0 +1,52 @@
+DESCRIPCION: Datos observados de precipitación acumulada mensual desde 879 estaciones de todo Chile, durante el período Enero de 1900-Diciembre de 2019. Recolectados de sistemas informáticos de diversas fuentes que se describen a continuación. Compilados por el equipo de Datos y Cómputos del (CR)2 a cargo de Francisca Muñoz, para fines de investigación y docencia. No sustituyen los datos originales provistos por las instituciones responsables de los mismos.
+
+COLECCION: Datos Observacionales. 
+Ubicación en Línea: http://www.cr2.cl/recursos-y-publicaciones/bases-de-datos/
+
+FUENTES: 
+    - DGA web: Contiene los datos de 845 estaciones, descargados desde http://snia.mop.gob.cl/BNAConsultas/reportes. Estos registros se complementan con los datos de 293 estaciones automaticas descargados desde http://dgasatel.mop.cl/index.asp.
+    - DMC merge: Contiene los datos combinados de 22 estaciones de la DMC, provistos por el proyecto ACT 19 (http://dgf.uchile.cl/ACT19), y los datos descargados, de las mismas 22 estaciones, desde el sitio público DMC https://climatologia.meteochile.gob.cl/
+    - DMC web: Contiene los datos de 12 estaciones, descargados íntegramente desde el sitio público DMC https://climatologia.meteochile.gob.cl/
+
+PERIODO: Enero de 1900 - Diciembre de 2019. Resolución Temporal: Mensual
+REGION: 879 estaciones de todo Chile
+VARIABLES: precipitación acumulada mensual, medida en milímetros.
+CARACTERISTICAS: Los archivos con extensión .zip contienen tres archivos de texto:
+    - El presente con la descripción de los contenidos
+    - El archivo cr2_prAmon_2019_stations.txt contiene el listado de estaciones utilizadas, con los metadatos indicados en *Información de las Estaciones*.
+    - El archivo cr2_prAmon_2019.txt contiene los datos de precipitación acumulada mensual correspondiente a 879 estaciones en Chile, entre Enero de 1900 y Diciembre de 2019 (119 años, 1439 meses). El reporte en sí contiene una columna por cada estacion, y filas que corresponden a los siguientes datos:
+    *Información de las estaciones*
+        - código estación (el código nacional considerado en la Institución que genera los datos)
+        - institución (el nombre de la Institución que genera los datos)
+        - fuente (de acuerdo a lo indicado en FUENTES)
+        - nombre de estación (nombre considerado en la Institución que genera los datos)
+        - altitud (m.s.n.m.)
+        - latitud (° decimales S)
+        - longitud (° decimales W)
+        - código de cuenca
+        - nombre de cuenca
+        - código de sub-cuenca
+        - nombre de sub-cuenca
+        - fecha de comienzo de observaciones
+        - fecha de fin de observaciones
+        - cantidad de observaciones
+        - inicio de observaciones en estación automatica
+    *Formato Datos*
+        - Las siguientes filas contienen las mediciones observadas correspondientes a cada período en el tiempo, para todas las estaciones consideradas.
+
+NOTAS:
+    - Períodos sin registro: Se asigna el valor "-9999" a aquellos períodos en los cuales no se registraron datos.
+    - Se consideraron datos de precipitación acumulada mensual de hasta 500 milímetros.
+    - Datos de Cuencas y Subcuencas: para las estaciones DGA, los datos de cuencas y subcuencas vienen incluídos. Para las estaciones DMC, estos datos fueron derivados por Paola Sánchez, tomando en cuenta de archivos shape incluyen la delimitación de las cuencas y subcuencas, descargadas desde www.geoportal.cl.
+    - Orden de las estaciones: Las estaciones se encuentran ordenadas primero según su fuente (de acuerdo a lo indicado en FUENTES), y luego por su latitud en orden de de Norte a Sur.
+	
+
+DETALLES DEL SISTEMA: Datos descargados y generados en servidores (CR)2, el 29-Abril-2020, utilizando scripts python y base de datos MySql. Para más consultas respecto a los datos o su actualización, contactar a 'cr2sysadmin@dgf.uchile.cl'.  
+Los archivos de texto generados contienen datos planos, y están separados por coma ',' (comma separated values). Pueden ser abiertos con un editor de texto o cargados en programas varios. Para visualizarlos como planilla de cálculo, puede ralizar las siguientes acciones, dependiendo de su sistema operativo y planilla de cálculo utilizada:
+   - En todos los casos: Considerar que el separador de datos es coma ',' y el separador de decimales es punto '.'
+   - MS Office: Desde Excel, ir a 'Abrir' y seleccionar 'Archivos de Texto' de la lista. Siga las instrucciones para importar texto. 
+   - LibreOffice o Gnumeric: Cambiar la extensión del archivo de .txt a .csv y abrirlo con LibreOffice. Siga las instrucciones para importar texto. Cuidado que LibreOffice tiene un límite máximo de despliegue de 1024 columnas (en este caso estaciones). Si el archivo contiene más de 1024 estaciones, se recomienda usar Gnumeric u otro sistema para manipular los datos.
+
+DECLARACIÓN: Estos datos abiertos son publicados bajo licencia Creative Commons CC0 waiver. Han sido compilados para fines de investigación y docencia. No sustituyen los datos originales provistos por las instituciones responsables de los mismos. CR2 no respalda ningún trabajo científico ni de otra índole, producido utilizando estos datos.
+
+Consultas o sugerencias a cr2sysadmin@dgf.uchile.cl
