@@ -138,3 +138,14 @@ Equipo [DESUC](http://sociologia.uc.cl/desuc/quienes-somos-desuc/)
 - Código disponible [aquí](/R/23-tiles.R)
 
 ![Día 21](output/23-tiles.png)
+
+
+### Día 27: Educational
+
+- Los datos pueden ser encontrados en la página de la [Agencia de la Calidad de la Educación](https://informacionestadistica.agenciaeducacion.cl/#/bases).
+- Código disponible [aquí](/R/27-educational.R)
+- Queremos mostrar con las dos versiones, la importancia del ajuste de los ejes y cómo influye en la percepción inicial de los datos
+
+![Día 27 versión 1](output/27-educational_v1.png)
+
+![Día 27 versión 2](output/27-educational_v2.png)
