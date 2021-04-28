@@ -132,4 +132,9 @@ Equipo [DESUC](http://sociologia.uc.cl/desuc/quienes-somos-desuc/)
 
 ![Día 21](output/21-downwards.gif)
 
+### Día 23: Tiles
 
+- Los datos pueden ser encontrados en la página de [V-Dem](https://www.v-dem.net/en/) o en el paquete `vdemdata`.
+- Código disponible [aquí](/R/23-tiles.R)
+
+![Día 21](output/23-tiles.png)
