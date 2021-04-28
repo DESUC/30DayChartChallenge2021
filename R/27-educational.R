@@ -52,7 +52,7 @@ tabla %>%
   scale_fill_manual(values = c('#FBC6A4', '#F4A9A8', '#CE97B0', '#AF9CB8', '#85C0D9')) +
   scale_color_manual(values = c('#FBC6A4', '#F4A9A8', '#CE97B0', '#AF9CB8', '#85C0D9')) +
   labs(title = "Puntaje Indicador Clima de Convivencia escolar del colegio",
-       subtitle = "Según grupo socioeconómico",
+       subtitle = "Según grupo socioeconómico, medición en 8° básico 2019",
        x = "Grupo socioeconómico", 
        y = "Puntaje indice",
        caption = "Datos de la Agencia de Calidad de la Educación año 2019") +
@@ -78,7 +78,7 @@ tabla %>%
   scale_fill_manual(values = c('#FBC6A4', '#F4A9A8', '#CE97B0', '#AF9CB8', '#85C0D9')) +
   scale_color_manual(values = c('#FBC6A4', '#F4A9A8', '#CE97B0', '#AF9CB8', '#85C0D9')) +
   labs(title = "Puntaje Indicador Clima de Convivencia escolar del colegio",
-       subtitle = "Según grupo socioeconómico",
+       subtitle = "Según grupo socioeconómico, medición en 8° básico 2019",
        x = "Grupo socioeconómico", 
        y = "Puntaje indice",
        caption = "Datos de la Agencia de Calidad de la Educación año 2019") +
