@@ -137,4 +137,11 @@ Equipo [DESUC](http://sociologia.uc.cl/desuc/quienes-somos-desuc/)
 - Los datos pueden ser encontrados en la página de [V-Dem](https://www.v-dem.net/en/) o en el paquete `vdemdata`.
 - Código disponible [aquí](/R/23-tiles.R)
 
-![Día 21](output/23-tiles.png)
+![Día 23](output/23-tiles.png)
+
+### Día 24: Monochrome
+
+- Los datos pueden ser descargados directamente desde `sinimr` o pueden ser encontradas en la página ofical del [SINIM](http://www.sinim.gov.cl).
+- Código disponible [aquí](/R/24-monochrome.R)
+
+![Día 24](output/24-monochrome.png)
