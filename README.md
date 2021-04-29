@@ -137,7 +137,6 @@ Equipo [DESUC](http://sociologia.uc.cl/desuc/quienes-somos-desuc/)
 - Los datos pueden ser encontrados en la página de [V-Dem](https://www.v-dem.net/en/) o en el paquete `vdemdata`.
 - Código disponible [aquí](/R/23-tiles.R)
 
-<<<<<<< HEAD
 ![Día 23](output/23-tiles.png)
 
 ### Día 24: Monochrome
@@ -146,9 +145,6 @@ Equipo [DESUC](http://sociologia.uc.cl/desuc/quienes-somos-desuc/)
 - Código disponible [aquí](/R/24-monochrome.R)
 
 ![Día 24](output/24-monochrome.png)
-=======
-![Día 21](output/23-tiles.png)
-
 
 ### Día 27: Educational
 
@@ -159,4 +155,4 @@ Equipo [DESUC](http://sociologia.uc.cl/desuc/quienes-somos-desuc/)
 ![Día 27 versión 1](output/27-educational_v1.png)
 
 ![Día 27 versión 2](output/27-educational_v2.png)
->>>>>>> e6be726551760435b2f0119922de9b66ffdd3cfa
+
